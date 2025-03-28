@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+service-settings:
+  data-topic: data-topic
+  remote-service-endpoint: "https://df3dea80-836f-4db8-8c95-1c3f6aa2954a.mock.pstmn.io/mockAPI"
+  retries-delivery: 3
+  retries-delay: 5000
+
+logging:
+  level:
+    com:
+      ttek:
+        testtask:
+          javaspring: DEBUG
+
+camel:
+  component:
+    kafka:
+      brokers: localhost:9092
+      autoCommitEnable: true
+      autoCommitIntervalMs: 5000
